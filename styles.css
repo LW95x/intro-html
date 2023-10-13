@@ -24,27 +24,35 @@ body{
     border: 1px solid white;
 }
 
-#item1{
+#title{
     grid-column: 1 / span 2;
     grid-row: 1 ;
-    text-align: center
+    text-align: center;
+    cursor:help
 }
 
-#item2{
+#title:focus {
+    border-color: dodgerblue;
+  }
+
+#teams{
     grid-row: 2;
-    grid-column: 1 
+    grid-column: 1;
+    cursor:cell
 }
-#item3{
+#founded{
     grid-row: 2;
     grid-column: 2;
+    cursor:alias;
 }
 
-#item4{
+#links{
     grid-row: 4;
     grid-column: 1 / span 2;
     justify-content: space-around;
     flex-direction:column;
     text-align: center;
+    cursor: grab;
 }
 
 nav a {
@@ -54,25 +62,51 @@ nav a {
 
 a:hover {
     color:cornflowerblue;
+    cursor: grabbing;
     transition:1s;
 }
 
-#img1{
+#liverpoolBagde{
     grid-row: 3;
     grid-column: 1;
+    cursor: crosshair;
 }
 
-#img1 p, #img2 p {
+#liverpoolBagde p, #wolvesBadge p {
     margin: 5px;
+    overflow: hidden;
 }
-#img2{
+
+@media (max-width: 938px) {
+    #liverpoolBagde, #wolvesBadge{
+      flex-direction: column;
+    }
+  }
+
+#wolvesBadge{
     grid-row: 3;
     grid-column: 2;
+    cursor: all-scroll;
+}
+
+#hiddenImg{
+    border: none
+}
+
+#hiddenImg:hover #hidden{
+    display: block
+}
+
+#hidden{
+    width: 120em;
+    height: 20em;
+    border: none;
+    display: none;
 }
 
 img{
-    width: 200px;
-    height: 200px;
+    width: 10rem;
+    height: 5rem;
 }
 
 .flex {
@@ -85,4 +119,10 @@ ul, ol {
 
 ul {
     list-style-type:square
+}
+
+#disabledLink{
+    pointer-events: none;
+    color: dimgray;
+    text-shadow: none;
 }
