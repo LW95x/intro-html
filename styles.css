@@ -1,9 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 100%;
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+}
+
 body{
     background-color: aqua;
 }
 
 h1, h2{
     font-family:'Courier New', Courier, monospace;
+    text-align: center;
 }
 
 header{
@@ -12,10 +27,13 @@ header{
 
 a{
     font-size: 1.5em;
+    margin: 0 0 50px 50px;
+    padding: 25px 25px 50px 50px;
 }
 
 ul, ol{
-    color: green
+    color: green;
+    text-align: center;
 }
 
 .photo-1{
