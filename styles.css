@@ -1,44 +1,61 @@
 * {
     margin: 0;
     padding: 0;
+    color: white;
+    font-family: 'Anton', sans-serif;
+    text-shadow: 0 0 2px black;
 }
 
-main {
-    width: 100%;
+body{
+    background: content-box radial-gradient(#ffb700, #ff0000);
+    /* background-image: url('superflares.jpg');
+    background-size: cover; /* Adjust the size of the image */
+    /* background-repeat: no-repeat; */ 
 }
 
-section {
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px; /* Gap between grid items */
+}
+
+.item {
+    padding: 20px;
+    border: 1px solid white;
+}
+
+#item1{
+    grid-column: 1 / span 2;
+    grid-row: 1 ;
+    text-align: center
+}
+
+#item2{
+    grid-row: 2;
+    grid-column: 1 
+}
+#item3{
+    grid-row: 2;
+    grid-column: 2;
+}
+
+#item4{
+    grid-row: 4;
+    grid-column: 1 / span 2;
     display: flex;
     justify-content: space-around;
 }
 
-body{
-    background-color: aqua;
+#img1{
+    grid-row: 3;
+    grid-column: 1 ;
+}
+#img2{
+    grid-row: 3;
+    grid-column: 2 ;
 }
 
-h1, h2{
-    font-family:'Courier New', Courier, monospace;
-    text-align: center;
-}
-
-header{
-    background-color: white;
-}
-
-a{
-    font-size: 1.5em;
-    margin: 0 0 50px 50px;
-    padding: 25px 25px 50px 50px;
-}
-
-ul, ol{
-    color: green;
-    text-align: center;
-}
-
-.photo-1{
-    width: 300px;
-    height: 10%;
-    border-radius: 1em;
-    border: 5px solid red;
+img{
+    width: 200px;
+    height: 200px;
 }
